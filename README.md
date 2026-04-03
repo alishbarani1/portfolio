@@ -1,140 +1,100 @@
-# React Portfolio App
+# Portfolio — Alishba Rani
 
-A modern, responsive portfolio website built with React and CSS3.
+Personal developer portfolio built with **React** and **Framer Motion**, with a dark gradient theme, animated hero, and section-based navigation.
+
+**Live site:** deploy this repo (for example GitHub Pages, Netlify, or Vercel) and set your production URL here.
+
+**Repository:** [github.com/alishbarani1/portfolio](https://github.com/alishbarani1/portfolio)
 
 ## Features
 
-- 📱 Fully responsive design (mobile, tablet, desktop)
-- 🎨 Modern and clean UI with smooth animations
-- 📦 Modular component structure
-- ⚡ Optimized performance
-- 🎯 SEO friendly
-- 📧 Contact form functionality
+- Responsive layout with scroll progress and fixed side navigation
+- Animated hero (typing roles, circular profile, motion effects)
+- Sections: About, Skills, Projects, Certifications, Contact
+- Framer Motion for scroll and UI animations
 
-## Project Structure
+## Tech stack
+
+- React 18
+- Framer Motion
+- Create React App (`react-scripts`)
+- CSS3 (custom properties, Grid, Flexbox)
+
+## Project structure
 
 ```
 src/
 ├── components/
-│   ├── Header.js
-│   ├── Hero.js
 │   ├── About.js
-│   ├── Projects.js
+│   ├── BackToTop.js
 │   ├── Certifications.js
 │   ├── Contact.js
-│   └── Footer.js
+│   ├── Footer.js
+│   ├── Header.js
+│   ├── Hero.js
+│   ├── Projects.js
+│   ├── ScrollProgress.js
+│   ├── SideNav.js
+│   └── Skills.js
 ├── styles/
-│   ├── Global.css
 │   ├── App.css
-│   ├── Header.css
-│   ├── Hero.css
-│   ├── About.css
-│   ├── Projects.css
-│   ├── Certifications.css
-│   ├── Contact.css
-│   └── Footer.css
-├── assets/
+│   ├── Global.css
+│   └── … (per-component CSS)
 ├── App.js
 └── index.js
+public/
+├── index.html
+└── profile.png   ← hero image (replace with your photo)
 ```
 
-## Installation
+## Getting started
 
-1. Navigate to the project directory:
 ```bash
+git clone https://github.com/alishbarani1/portfolio.git
 cd portfolio
-```
-
-2. Install dependencies:
-```bash
 npm install
-```
-
-## Available Scripts
-
-### Start Development Server
-```bash
 npm start
 ```
-Runs the app in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### Build for Production
-```bash
-npm build
-```
-Builds the app for production to the `build` folder.
+Open [http://localhost:3000](http://localhost:3000).
 
-### Run Tests
-```bash
-npm test
-```
-Launches the test runner.
+## Scripts
+
+| Command        | Description              |
+| -------------- | ------------------------ |
+| `npm start`    | Dev server (hot reload)  |
+| `npm run build`| Production build → `build/` |
+| `npm test`     | Test runner (interactive) |
 
 ## Customization
 
-### Update Personal Information
-- Edit `src/components/Hero.js` - Update your name and title
-- Edit `src/components/About.js` - Update your bio and skills
-- Edit `src/components/Footer.js` - Update your name and year
-- Edit `src/components/Contact.js` - Update your email, phone, and location
+- **Name / hero copy:** `src/components/Hero.js`
+- **About & stats:** `src/components/About.js`, `src/components/Skills.js`
+- **Projects & certifications:** `src/components/Projects.js`, `src/components/Certifications.js`
+- **Contact:** `src/components/Contact.js`
+- **Theme colors:** `src/styles/Global.css` (`:root` variables)
+- **Profile photo:** add or replace `public/profile.png` (referenced from `Hero.js`)
 
-### Add Your Image
-1. Place your image in `src/assets/` folder
-2. Import it in the component where needed
-3. Replace the placeholder with your image
+## Continuous integration
 
-### Add Certification Images
-1. Place certification images in `src/assets/certifications/`
-2. Update the `Certifications.js` component to reference your images
+GitHub Actions runs `npm ci` and `npm run build` on pushes and pull requests to `main` (see `.github/workflows/ci.yml`).
 
-### Customize Colors
-Edit `:root` variables in `src/styles/Global.css`:
-```css
-:root {
-  --primary-color: #2563eb;
-  --secondary-color: #1e40af;
-  /* ... other colors */
-}
+## Pushing to GitHub (HTTPS)
+
+From the project folder, with Git configured for your account:
+
+```bash
+git add .
+git commit -m "Your message"
+git push -u origin main
 ```
 
-## Technologies Used
-
-- React 18
-- CSS3 (Grid, Flexbox, Media Queries)
-- JavaScript ES6+
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-## Performance Optimization
-
-- Component-based architecture
-- Lazy loading support ready
-- CSS Grid and Flexbox for efficient layouts
-- Optimized animations with CSS transforms
-- Mobile-first responsive design
-
-## Future Enhancements
-
-- Add more interactive features
-- Implement smooth scrolling animations
-- Add dark mode toggle
-- Integrate backend for contact form
-- Add blog section
-- Implement image optimization
+If prompted for credentials, use a [Personal Access Token](https://github.com/settings/tokens) (classic: enable **repo**) as the password, or sign in with **Git Credential Manager** / browser flow when offered.
 
 ## License
 
-MIT License
+MIT — see [LICENSE](LICENSE).
 
 ## Author
 
-Your Name
-
----
-
-For more information or questions, please reach out through the contact section on the portfolio website.
+Alishba Rani
